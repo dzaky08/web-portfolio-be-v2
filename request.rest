@@ -1,0 +1,62 @@
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Admin Abdul",
+    "email": "abdul1@gmail.com",
+    "password": "adminabdul1234",
+    "confPassword": "adminabdul1234"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "abdul1@gmail.com",
+    "password": "adminabdul1234"
+}
+
+###
+GET http://localhost:5000/api/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJBZG1pbiBBYmR1bCIsImVtYWlsIjoiYWJkdWwxQGdtYWlsLmNvbSIsImlhdCI6MTc1OTMyMjk4MCwiZXhwIjoxNzU5MzIyOTk1fQ.e1GRqdxvH0ZTcgSnY8mj1cFztZDMTOnPFHavgCz9Gcw
+###
+GET  http://localhost:5000/api/token
+###
+DELETE http://localhost:5000/api/logout
+
+###
+POST http://localhost:5000/api/add-project
+Content-Type: application/json
+
+{
+    "title": "Blog Abduldaredf",
+    "image": "blogabdul.jpg",
+    "description": "Ini adalah blog personal abdul",
+    "client": "Abdul",
+    "start_date": "2025-08-01",
+    "end_date": "2025-09-02",
+    "status": "ongoing"
+}
+###
+GET http://localhost:5000/api/get-project
+###
+PUT http://localhost:5000/api/get-project/3
+Content-Type: application/json
+
+{
+    "title": "ABCD COMPANY",
+    "image": "ABCCOMPANY.jpg",
+    "project_desc": "Ini adalah web perusahaan ABC COMPANY",
+    "client": "ABC COMPANY",
+    "start_date": "2025-09-5",
+    "end_date": "2025-10-15",
+    "project_status": "completed"
+}
+
+###
+GET http://localhost:5000/api/get-projects/abc-company
+
+###
+DELETE http://localhost:5000/api/project/3
